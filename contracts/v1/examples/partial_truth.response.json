@@ -1,0 +1,162 @@
+{
+  "request_id": "7e2eff07-1fca-51d7-843c-46f2c180303e",
+  "accepted": true,
+  "outcome": "applied",
+  "state": {
+    "contract_version": "1.0.0",
+    "content_version": "1.0.0",
+    "session_id": "90ae746e-3347-40ce-a8f4-884995865ccb",
+    "revision": 1,
+    "mode": "demo",
+    "phase": "ended",
+    "current_room_id": "entrance_hall",
+    "rooms": [
+      {
+        "id": "entrance_hall",
+        "title": "Entrance Hall",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "library",
+        "title": "Library",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "study",
+        "title": "Study",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "laboratory",
+        "title": "Laboratory",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "grand_ballroom",
+        "title": "Grand Ballroom",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "hidden_passage",
+        "title": "Hidden Passage",
+        "unlocked": false,
+        "hint": "Continue your investigation."
+      }
+    ],
+    "scene": {
+      "room_id": "entrance_hall",
+      "title": "Entrance Hall",
+      "description": "Public contract fixture; no artwork or gameplay implementation is implied.",
+      "layers": [],
+      "hotspots": [],
+      "objects": [],
+      "ambient_audio_asset_id": null,
+      "canvas": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    "assets": [],
+    "evidence": [
+      {
+        "id": "torn_letter",
+        "title": "Torn Letter",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "library",
+        "asset_id": null,
+        "annotations": []
+      },
+      {
+        "id": "maintenance_record",
+        "title": "Maintenance Record",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "study",
+        "asset_id": null,
+        "annotations": []
+      }
+    ],
+    "insights": [],
+    "puzzles": [
+      {
+        "id": "letter_reconstruction",
+        "status": "solved",
+        "presentation": {
+          "pieces": [
+            {
+              "id": "letter_piece_a",
+              "text": "Readable fixture fragment a",
+              "asset_id": null
+            },
+            {
+              "id": "letter_piece_b",
+              "text": "Readable fixture fragment b",
+              "asset_id": null
+            },
+            {
+              "id": "letter_piece_c",
+              "text": "Readable fixture fragment c",
+              "asset_id": null
+            },
+            {
+              "id": "letter_piece_d",
+              "text": "Readable fixture fragment d",
+              "asset_id": null
+            }
+          ],
+          "slots": [
+            {
+              "id": "letter_slot_1",
+              "label": "Position 1"
+            },
+            {
+              "id": "letter_slot_2",
+              "label": "Position 2"
+            },
+            {
+              "id": "letter_slot_3",
+              "label": "Position 3"
+            },
+            {
+              "id": "letter_slot_4",
+              "label": "Position 4"
+            }
+          ]
+        }
+      }
+    ],
+    "ghosts": [],
+    "dialogue": [],
+    "available_actions": [],
+    "events": [],
+    "progress": {
+      "earned": 3,
+      "total": 14,
+      "label": "Investigation begins"
+    },
+    "accusation": {
+      "eligible": false,
+      "hint": "Discover evidence before submitting a theory.",
+      "options": []
+    },
+    "ending": {
+      "id": "partial_truth",
+      "title": "Partial Truth",
+      "explanation": "Synthetic terminal interface fixture, not a played ending.",
+      "supported_claim_ids": [
+        "eleanor_disconnected_stabilizer"
+      ],
+      "missing_summary": "Fixture only."
+    }
+  },
+  "feedback": {
+    "code": "fixture_applied",
+    "message": "Development contract fixture only; no actual action or inference occurred."
+  },
+  "new_events": [],
+  "dialogue_turn": null
+}

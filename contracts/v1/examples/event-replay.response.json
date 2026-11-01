@@ -1,0 +1,172 @@
+{
+  "request_id": "5e5ad798-038b-5a04-8b97-7d268e8bfa66",
+  "accepted": true,
+  "outcome": "applied",
+  "state": {
+    "contract_version": "1.0.0",
+    "content_version": "1.0.0",
+    "session_id": "90ae746e-3347-40ce-a8f4-884995865ccb",
+    "revision": 1,
+    "mode": "demo",
+    "phase": "investigating",
+    "current_room_id": "library",
+    "rooms": [
+      {
+        "id": "entrance_hall",
+        "title": "Entrance Hall",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "library",
+        "title": "Library",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "study",
+        "title": "Study",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "laboratory",
+        "title": "Laboratory",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "grand_ballroom",
+        "title": "Grand Ballroom",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "hidden_passage",
+        "title": "Hidden Passage",
+        "unlocked": false,
+        "hint": "Continue your investigation."
+      }
+    ],
+    "scene": {
+      "room_id": "library",
+      "title": "Library",
+      "description": "Public contract fixture; no artwork or gameplay implementation is implied.",
+      "layers": [],
+      "hotspots": [],
+      "objects": [
+        {
+          "id": "library_letter_drawer",
+          "state": "open",
+          "description": "The open drawer exposes the fragments."
+        }
+      ],
+      "ambient_audio_asset_id": null,
+      "canvas": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    "assets": [],
+    "evidence": [
+      {
+        "id": "torn_letter",
+        "title": "Torn Letter",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "library",
+        "asset_id": null,
+        "annotations": []
+      }
+    ],
+    "insights": [],
+    "puzzles": [
+      {
+        "id": "letter_reconstruction",
+        "status": "solved",
+        "presentation": {
+          "pieces": [
+            {
+              "id": "letter_piece_a",
+              "text": "Readable fixture fragment a",
+              "asset_id": null
+            },
+            {
+              "id": "letter_piece_b",
+              "text": "Readable fixture fragment b",
+              "asset_id": null
+            },
+            {
+              "id": "letter_piece_c",
+              "text": "Readable fixture fragment c",
+              "asset_id": null
+            },
+            {
+              "id": "letter_piece_d",
+              "text": "Readable fixture fragment d",
+              "asset_id": null
+            }
+          ],
+          "slots": [
+            {
+              "id": "letter_slot_1",
+              "label": "Position 1"
+            },
+            {
+              "id": "letter_slot_2",
+              "label": "Position 2"
+            },
+            {
+              "id": "letter_slot_3",
+              "label": "Position 3"
+            },
+            {
+              "id": "letter_slot_4",
+              "label": "Position 4"
+            }
+          ]
+        }
+      }
+    ],
+    "ghosts": [],
+    "dialogue": [],
+    "available_actions": [
+      {
+        "type": "navigate",
+        "target_id": "library",
+        "label": "Enter the Library"
+      }
+    ],
+    "events": [
+      {
+        "id": "fixture_run_1_event_1",
+        "sequence": 1,
+        "cue_id": "event_letter_whisper",
+        "summary": "Readable fixture event."
+      }
+    ],
+    "progress": {
+      "earned": 2,
+      "total": 14,
+      "label": "Investigation begins"
+    },
+    "accusation": {
+      "eligible": false,
+      "hint": "Discover evidence before submitting a theory.",
+      "options": []
+    },
+    "ending": null
+  },
+  "feedback": {
+    "code": "fixture_applied",
+    "message": "Development contract fixture only; no actual action or inference occurred."
+  },
+  "new_events": [
+    {
+      "id": "fixture_run_1_event_1",
+      "sequence": 1,
+      "cue_id": "event_letter_whisper",
+      "summary": "Readable fixture event."
+    }
+  ],
+  "dialogue_turn": null
+}

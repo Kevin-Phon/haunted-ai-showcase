@@ -1,0 +1,88 @@
+{
+  "request_id": "19de9638-2fd0-4c64-a111-dfdf3daa6097",
+  "state": {
+    "contract_version": "1.0.0",
+    "content_version": "1.0.0",
+    "session_id": "90ae746e-3347-40ce-a8f4-884995865ccb",
+    "revision": 0,
+    "mode": "demo",
+    "phase": "investigating",
+    "current_room_id": "entrance_hall",
+    "rooms": [
+      {
+        "id": "entrance_hall",
+        "title": "Entrance Hall",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "library",
+        "title": "Library",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "study",
+        "title": "Study",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "laboratory",
+        "title": "Laboratory",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "grand_ballroom",
+        "title": "Grand Ballroom",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "hidden_passage",
+        "title": "Hidden Passage",
+        "unlocked": false,
+        "hint": "Continue your investigation."
+      }
+    ],
+    "scene": {
+      "room_id": "entrance_hall",
+      "title": "Entrance Hall",
+      "description": "Public contract fixture; no artwork or gameplay implementation is implied.",
+      "layers": [],
+      "hotspots": [],
+      "objects": [],
+      "ambient_audio_asset_id": null,
+      "canvas": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    "assets": [],
+    "evidence": [],
+    "insights": [],
+    "puzzles": [],
+    "ghosts": [],
+    "dialogue": [],
+    "available_actions": [
+      {
+        "type": "navigate",
+        "target_id": "library",
+        "label": "Enter the Library"
+      }
+    ],
+    "events": [],
+    "progress": {
+      "earned": 0,
+      "total": 14,
+      "label": "Investigation begins"
+    },
+    "accusation": {
+      "eligible": false,
+      "hint": "Discover evidence before submitting a theory.",
+      "options": []
+    },
+    "ending": null
+  }
+}

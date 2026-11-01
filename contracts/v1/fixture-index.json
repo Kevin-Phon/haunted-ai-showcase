@@ -1,0 +1,163 @@
+{
+  "version": "1.0.0",
+  "status": "frozen",
+  "fixtures": [
+    {
+      "path": "examples/create.request.json",
+      "schema": "api.schema.json#/$defs/CreateRequest"
+    },
+    {
+      "path": "examples/session.response.json",
+      "schema": "api.schema.json#/$defs/SessionResponse"
+    },
+    {
+      "path": "examples/action.request.json",
+      "schema": "api.schema.json#/$defs/ActionRequest"
+    },
+    {
+      "path": "examples/invalid-action.response.json",
+      "schema": "api.schema.json#/$defs/Error"
+    },
+    {
+      "path": "examples/health.response.json",
+      "schema": "api.schema.json#/$defs/Health"
+    },
+    {
+      "path": "examples/restart.request.json",
+      "schema": "api.schema.json#/$defs/RestartRequest"
+    },
+    {
+      "path": "examples/navigate.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/drawer-open.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/discovery.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/letter-available.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/letter-incorrect.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/letter-solved.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/letter-duplicate.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/calibration-available.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/calibration-incorrect.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/calibration-solved.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/calibration-duplicate.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/deduction-accepted.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/deduction-duplicate.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/deduction-incorrect.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/eleanor-live.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/eleanor-demo.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/eleanor-fallback.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/thomas-live.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/thomas-demo.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/thomas-fallback.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/clara-live.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/clara-demo.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/clara-fallback.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/event-new.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/event-replay.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/truth_revealed.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/partial_truth.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/false_accusation.response.json",
+      "schema": "api.schema.json#/$defs/ActionResponse"
+    },
+    {
+      "path": "examples/revision_conflict.response.json",
+      "schema": "api.schema.json#/$defs/Error"
+    },
+    {
+      "path": "examples/idempotency_conflict.response.json",
+      "schema": "api.schema.json#/$defs/Error"
+    },
+    {
+      "path": "examples/session_not_found.response.json",
+      "schema": "api.schema.json#/$defs/Error"
+    },
+    {
+      "path": "examples/session_ended.response.json",
+      "schema": "api.schema.json#/$defs/Error"
+    },
+    {
+      "path": "examples/restart.response.json",
+      "schema": "api.schema.json#/$defs/SessionResponse"
+    }
+  ],
+  "usage": "Each indexed example is an independent synthetic scenario, not a chronological stream, except event-replay.response.json exactly replays event-new.response.json."
+}

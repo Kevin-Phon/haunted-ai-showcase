@@ -1,0 +1,140 @@
+{
+  "content_version": "1.0.1",
+  "format_version": "1.0.0",
+  "date": "2026-10-31",
+  "scope": "Frontend-owned delivered files; relative public paths only; no license grant",
+  "assets": [
+    {
+      "asset_id": "art_entrance_hall",
+      "src": "media/entrance_hall-scene-v1.png",
+      "bytes": 2568564,
+      "sha256": "fedcae81f6156522c26d226873d227de98f665a4b59dbc911e4f516980ad4c94",
+      "width": 1600,
+      "height": 900,
+      "source_receipt": "Original generation receipt retained in private development archive.",
+      "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+      "transformation": "macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop",
+      "attribution_id": "generated_entrance_hall_20261031"
+    },
+    {
+      "asset_id": "art_library",
+      "src": "media/library-scene-v1.png",
+      "bytes": 2328938,
+      "sha256": "06ae6067c29b116403b6427a444c9b55477b15626f1b6efaa50495b615348c8f",
+      "width": 1600,
+      "height": 900,
+      "source_receipt": "Original generation receipt retained in private development archive.",
+      "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+      "transformation": "macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop",
+      "attribution_id": "generated_library_20261031"
+    },
+    {
+      "asset_id": "art_study",
+      "src": "media/study-scene-v1.png",
+      "bytes": 2175572,
+      "sha256": "9e985b4421c979d30ece7be5df3ff2d0326d7b3de82d553dcdbd9f417f958317",
+      "width": 1600,
+      "height": 900,
+      "source_receipt": "Original generation receipt retained in private development archive.",
+      "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+      "transformation": "macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop",
+      "attribution_id": "generated_study_20261031"
+    },
+    {
+      "asset_id": "art_laboratory",
+      "src": "media/laboratory-scene-v1.png",
+      "bytes": 2323654,
+      "sha256": "1a5f5f0d2c59ec1601069954470f47536ca96582b539deea986959a95bc5fc51",
+      "width": 1600,
+      "height": 900,
+      "source_receipt": "Original generation receipt retained in private development archive.",
+      "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+      "transformation": "macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop",
+      "attribution_id": "generated_laboratory_20261031"
+    },
+    {
+      "asset_id": "art_grand_ballroom",
+      "src": "media/grand_ballroom-scene-v1.png",
+      "bytes": 2401090,
+      "sha256": "08c1defaddc207f036acee98a0728989917d9292ba88d47ba6a433ca02caa1bc",
+      "width": 1600,
+      "height": 900,
+      "source_receipt": "Original generation receipt retained in private development archive.",
+      "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+      "transformation": "macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop",
+      "attribution_id": "generated_grand_ballroom_20261031"
+    },
+    {
+      "asset_id": "art_hidden_passage",
+      "src": "media/hidden_passage-scene-v1.png",
+      "bytes": 2149684,
+      "sha256": "1691d8455ff55abf3cbe3e2793d0598e732a145d05d721cdf6e8f4b11db81bdd",
+      "width": 1600,
+      "height": 900,
+      "source_receipt": "Original generation receipt retained in private development archive.",
+      "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+      "transformation": "macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop",
+      "attribution_id": "generated_hidden_passage_20261031"
+    },
+    {
+      "asset_id": "art_eleanor",
+      "src": "media/eleanor-v1.png",
+      "bytes": 2327444,
+      "sha256": "3a4fcbd702116f0d409f0c3db2e38060920371dc2a6f9e9682ede4d1f9ca200f",
+      "width": 1024,
+      "height": 1536,
+      "source_receipt": "Original generation receipt retained in private development archive.",
+      "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+      "transformation": "Unmodified tool output",
+      "attribution_id": "generated_eleanor_20261031"
+    },
+    {
+      "asset_id": "art_thomas",
+      "src": "media/thomas-v1.png",
+      "bytes": 2210956,
+      "sha256": "3fdd09b05f34e34a90d3e715e2f5f6319ca1a7299397dba0eba1da537bc9d6c8",
+      "width": 1024,
+      "height": 1536,
+      "source_receipt": "Original generation receipt retained in private development archive.",
+      "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+      "transformation": "Unmodified tool output",
+      "attribution_id": "generated_thomas_20261031"
+    },
+    {
+      "asset_id": "art_clara",
+      "src": "media/clara-v1.png",
+      "bytes": 2533330,
+      "sha256": "7413535db1e986c0f25773c868fc861dc90baa999d31d06840a5c7de8b911c82",
+      "width": 1024,
+      "height": 1536,
+      "source_receipt": "Original generation receipt retained in private development archive.",
+      "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+      "transformation": "Unmodified tool output",
+      "attribution_id": "generated_clara_20261031"
+    },
+    {
+      "asset_id": "audio_manor_ambience",
+      "src": "media/manor-ambience-v1.wav",
+      "bytes": 352844,
+      "sha256": "bae7666b2ac7f94e550331bb82481d260f02939bdad67ec3fe95143eb66fb9bd",
+      "width": null,
+      "height": null,
+      "source_receipt": null,
+      "source": "Original sine synthesis; scripts/generate-audio.py; 2026-10-31",
+      "transformation": "Original waveform synthesis",
+      "attribution_id": "original_synth_audio_20261031"
+    },
+    {
+      "asset_id": "audio_discovery",
+      "src": "media/discovery-v1.wav",
+      "bytes": 66194,
+      "sha256": "6388f329145b33f1122dd34ce149f428b3dc831bd920910e665528af44d9685a",
+      "width": null,
+      "height": null,
+      "source_receipt": null,
+      "source": "Original sine synthesis; scripts/generate-audio.py; 2026-10-31",
+      "transformation": "Original waveform synthesis",
+      "attribution_id": "original_synth_audio_20261031"
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "request_id": "f62c65a8-e714-5329-84cd-60b8dfc3b3ab",
+  "accepted": true,
+  "outcome": "applied",
+  "state": {
+    "contract_version": "1.0.0",
+    "content_version": "1.0.0",
+    "session_id": "90ae746e-3347-40ce-a8f4-884995865ccb",
+    "revision": 1,
+    "mode": "demo",
+    "phase": "ended",
+    "current_room_id": "entrance_hall",
+    "rooms": [
+      {
+        "id": "entrance_hall",
+        "title": "Entrance Hall",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "library",
+        "title": "Library",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "study",
+        "title": "Study",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "laboratory",
+        "title": "Laboratory",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "grand_ballroom",
+        "title": "Grand Ballroom",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "hidden_passage",
+        "title": "Hidden Passage",
+        "unlocked": true,
+        "hint": "Continue your investigation."
+      }
+    ],
+    "scene": {
+      "room_id": "entrance_hall",
+      "title": "Entrance Hall",
+      "description": "Public contract fixture; no artwork or gameplay implementation is implied.",
+      "layers": [],
+      "hotspots": [],
+      "objects": [],
+      "ambient_audio_asset_id": null,
+      "canvas": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    "assets": [],
+    "evidence": [
+      {
+        "id": "torn_letter",
+        "title": "Torn Letter",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "library",
+        "asset_id": null,
+        "annotations": []
+      },
+      {
+        "id": "damaged_notebook",
+        "title": "Damaged Notebook",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "study",
+        "asset_id": null,
+        "annotations": []
+      },
+      {
+        "id": "servant_log",
+        "title": "Servant Log",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "study",
+        "asset_id": null,
+        "annotations": []
+      },
+      {
+        "id": "memory_crystal",
+        "title": "Memory Crystal",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "laboratory",
+        "asset_id": null,
+        "annotations": []
+      },
+      {
+        "id": "maintenance_record",
+        "title": "Maintenance Record",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "study",
+        "asset_id": null,
+        "annotations": []
+      },
+      {
+        "id": "gathering_photograph",
+        "title": "Gathering Photograph",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "grand_ballroom",
+        "asset_id": null,
+        "annotations": []
+      },
+      {
+        "id": "sealed_report",
+        "title": "Sealed Report",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "hidden_passage",
+        "asset_id": null,
+        "annotations": []
+      },
+      {
+        "id": "final_recording",
+        "title": "Final Recording",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "laboratory",
+        "asset_id": null,
+        "annotations": []
+      }
+    ],
+    "insights": [
+      {
+        "id": "deduction_hidden_route",
+        "title": "Deduction Hidden Route",
+        "description": "Earned interface-fixture insight.",
+        "evidence_ids": [
+          "servant_log",
+          "gathering_photograph"
+        ]
+      },
+      {
+        "id": "deduction_protective_sabotage",
+        "title": "Deduction Protective Sabotage",
+        "description": "Earned interface-fixture insight.",
+        "evidence_ids": [
+          "torn_letter",
+          "sealed_report"
+        ]
+      },
+      {
+        "id": "deduction_partial_restart",
+        "title": "Deduction Partial Restart",
+        "description": "Earned interface-fixture insight.",
+        "evidence_ids": [
+          "servant_log",
+          "maintenance_record"
+        ]
+      },
+      {
+        "id": "deduction_fatal_instability",
+        "title": "Deduction Fatal Instability",
+        "description": "Earned interface-fixture insight.",
+        "evidence_ids": [
+          "damaged_notebook",
+          "final_recording"
+        ]
+      }
+    ],
+    "puzzles": [
+      {
+        "id": "letter_reconstruction",
+        "status": "solved",
+        "presentation": {
+          "pieces": [
+            {
+              "id": "letter_piece_a",
+              "text": "Readable fixture fragment a",
+              "asset_id": null
+            },
+            {
+              "id": "letter_piece_b",
+              "text": "Readable fixture fragment b",
+              "asset_id": null
+            },
+            {
+              "id": "letter_piece_c",
+              "text": "Readable fixture fragment c",
+              "asset_id": null
+            },
+            {
+              "id": "letter_piece_d",
+              "text": "Readable fixture fragment d",
+              "asset_id": null
+            }
+          ],
+          "slots": [
+            {
+              "id": "letter_slot_1",
+              "label": "Position 1"
+            },
+            {
+              "id": "letter_slot_2",
+              "label": "Position 2"
+            },
+            {
+              "id": "letter_slot_3",
+              "label": "Position 3"
+            },
+            {
+              "id": "letter_slot_4",
+              "label": "Position 4"
+            }
+          ]
+        }
+      },
+      {
+        "id": "machine_calibration",
+        "status": "solved",
+        "presentation": {
+          "controls": [
+            {
+              "id": "power_level",
+              "kind": "integer",
+              "label": "Power",
+              "minimum": 0,
+              "maximum": 3,
+              "step": 1
+            },
+            {
+              "id": "phase",
+              "kind": "choice",
+              "label": "Phase",
+              "options": [
+                {
+                  "value": "amber",
+                  "label": "Amber"
+                },
+                {
+                  "value": "violet",
+                  "label": "Violet"
+                },
+                {
+                  "value": "cyan",
+                  "label": "Cyan"
+                }
+              ]
+            },
+            {
+              "id": "stabilizer",
+              "kind": "choice",
+              "label": "Stabilizer",
+              "options": [
+                {
+                  "value": "bypass",
+                  "label": "Bypass"
+                },
+                {
+                  "value": "engaged",
+                  "label": "Engaged"
+                }
+              ]
+            }
+          ],
+          "instructions": "Fixture: infer safe settings from discovered records; no answer key is supplied here."
+        }
+      }
+    ],
+    "ghosts": [],
+    "dialogue": [],
+    "available_actions": [],
+    "events": [],
+    "progress": {
+      "earned": 14,
+      "total": 14,
+      "label": "Investigation begins"
+    },
+    "accusation": {
+      "eligible": false,
+      "hint": "Discover evidence before submitting a theory.",
+      "options": []
+    },
+    "ending": {
+      "id": "truth_revealed",
+      "title": "Truth Revealed",
+      "explanation": "Synthetic terminal interface fixture, not a played ending.",
+      "supported_claim_ids": [
+        "eleanor_disconnected_stabilizer",
+        "eleanor_protected_clara",
+        "thomas_restored_power",
+        "thomas_protected_reputation",
+        "unstable_run_killed_elias"
+      ],
+      "missing_summary": "Fixture only."
+    }
+  },
+  "feedback": {
+    "code": "fixture_applied",
+    "message": "Development contract fixture only; no actual action or inference occurred."
+  },
+  "new_events": [],
+  "dialogue_turn": null
+}

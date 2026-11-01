@@ -1,0 +1,173 @@
+{
+  "request_id": "7cafbc9c-d8d5-5188-9eaa-d8ac48bc6836",
+  "accepted": true,
+  "outcome": "incorrect",
+  "state": {
+    "contract_version": "1.0.0",
+    "content_version": "1.0.0",
+    "session_id": "90ae746e-3347-40ce-a8f4-884995865ccb",
+    "revision": 1,
+    "mode": "demo",
+    "phase": "investigating",
+    "current_room_id": "laboratory",
+    "rooms": [
+      {
+        "id": "entrance_hall",
+        "title": "Entrance Hall",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "library",
+        "title": "Library",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "study",
+        "title": "Study",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "laboratory",
+        "title": "Laboratory",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "grand_ballroom",
+        "title": "Grand Ballroom",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "hidden_passage",
+        "title": "Hidden Passage",
+        "unlocked": false,
+        "hint": "Continue your investigation."
+      }
+    ],
+    "scene": {
+      "room_id": "laboratory",
+      "title": "Laboratory",
+      "description": "Public contract fixture; no artwork or gameplay implementation is implied.",
+      "layers": [],
+      "hotspots": [],
+      "objects": [],
+      "ambient_audio_asset_id": null,
+      "canvas": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    "assets": [],
+    "evidence": [
+      {
+        "id": "damaged_notebook",
+        "title": "Damaged Notebook",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "study",
+        "asset_id": null,
+        "annotations": []
+      },
+      {
+        "id": "memory_crystal",
+        "title": "Memory Crystal",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "laboratory",
+        "asset_id": null,
+        "annotations": []
+      },
+      {
+        "id": "sealed_report",
+        "title": "Sealed Report",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "hidden_passage",
+        "asset_id": null,
+        "annotations": []
+      }
+    ],
+    "insights": [],
+    "puzzles": [
+      {
+        "id": "machine_calibration",
+        "status": "available",
+        "presentation": {
+          "controls": [
+            {
+              "id": "power_level",
+              "kind": "integer",
+              "label": "Power",
+              "minimum": 0,
+              "maximum": 3,
+              "step": 1
+            },
+            {
+              "id": "phase",
+              "kind": "choice",
+              "label": "Phase",
+              "options": [
+                {
+                  "value": "amber",
+                  "label": "Amber"
+                },
+                {
+                  "value": "violet",
+                  "label": "Violet"
+                },
+                {
+                  "value": "cyan",
+                  "label": "Cyan"
+                }
+              ]
+            },
+            {
+              "id": "stabilizer",
+              "kind": "choice",
+              "label": "Stabilizer",
+              "options": [
+                {
+                  "value": "bypass",
+                  "label": "Bypass"
+                },
+                {
+                  "value": "engaged",
+                  "label": "Engaged"
+                }
+              ]
+            }
+          ],
+          "instructions": "Fixture: infer safe settings from discovered records; no answer key is supplied here."
+        }
+      }
+    ],
+    "ghosts": [],
+    "dialogue": [],
+    "available_actions": [
+      {
+        "type": "navigate",
+        "target_id": "library",
+        "label": "Enter the Library"
+      }
+    ],
+    "events": [],
+    "progress": {
+      "earned": 3,
+      "total": 14,
+      "label": "Investigation begins"
+    },
+    "accusation": {
+      "eligible": false,
+      "hint": "Discover evidence before submitting a theory.",
+      "options": []
+    },
+    "ending": null
+  },
+  "feedback": {
+    "code": "puzzle_incorrect",
+    "message": "Development contract fixture only; no actual action or inference occurred."
+  },
+  "new_events": [],
+  "dialogue_turn": null
+}

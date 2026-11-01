@@ -1,0 +1,1016 @@
+{
+  "type": "object",
+  "properties": {
+    "format_version": {
+      "const": "1.0.0"
+    },
+    "content_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "content_id": {
+      "const": "blackthorn_manor"
+    },
+    "initial_room_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "maxLength": 80
+    },
+    "rooms": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Room"
+      },
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "objects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Object"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Evidence"
+      },
+      "minItems": 8
+    },
+    "puzzles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Puzzle"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "deductions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Deduction"
+      },
+      "minItems": 4
+    },
+    "ghosts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Ghost"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "knowledge": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Knowledge"
+      }
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Rule"
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Claim"
+      }
+    },
+    "endings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/EndingRule"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Timeline"
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "maxLength": 80
+          },
+          "cue_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "maxLength": 80
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "cue_id",
+          "summary"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "$ref": "./api.schema.json#/$defs/Asset"
+      }
+    },
+    "attributions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Attribution"
+      }
+    }
+  },
+  "required": [
+    "format_version",
+    "content_version",
+    "content_id",
+    "initial_room_id",
+    "rooms",
+    "objects",
+    "evidence",
+    "puzzles",
+    "deductions",
+    "ghosts",
+    "knowledge",
+    "rules",
+    "claims",
+    "endings",
+    "timeline",
+    "events",
+    "assets",
+    "attributions"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://haunted-ai.invalid/contracts/v1/game-data.schema.json",
+  "title": "PRIVATE content 1.0.0",
+  "$defs": {
+    "Predicate": {
+      "type": "object",
+      "properties": {
+        "all_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "maxLength": 80
+          },
+          "uniqueItems": true
+        },
+        "all_insights": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "maxLength": 80
+          },
+          "uniqueItems": true
+        },
+        "all_puzzles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "maxLength": 80
+          },
+          "uniqueItems": true
+        },
+        "object_states": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "object_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$",
+                "maxLength": 80
+              },
+              "state": {
+                "type": "string",
+                "enum": [
+                  "closed",
+                  "open",
+                  "inactive",
+                  "active",
+                  "calibrated"
+                ]
+              }
+            },
+            "required": [
+              "object_id",
+              "state"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "all_evidence",
+        "all_insights",
+        "all_puzzles",
+        "object_states"
+      ],
+      "additionalProperties": false
+    },
+    "Effect": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "grant_evidence",
+            "grant_insight",
+            "unlock_room",
+            "reveal_object",
+            "set_object_state",
+            "emit_event",
+            "enable_puzzle"
+          ]
+        },
+        "target_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        },
+        "state": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "closed",
+                "open",
+                "inactive",
+                "active",
+                "calibrated"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "target_id",
+        "state"
+      ],
+      "additionalProperties": false
+    },
+    "Attribution": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        },
+        "origin": {
+          "type": "string",
+          "enum": [
+            "original",
+            "generated",
+            "third_party"
+          ]
+        },
+        "creator": {
+          "type": "string"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "license": {
+          "type": "string"
+        },
+        "license_url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "generation_tool": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "origin",
+        "creator",
+        "source_url",
+        "license",
+        "license_url",
+        "notes",
+        "generation_tool"
+      ],
+      "additionalProperties": false
+    },
+    "Room": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "initially_unlocked": {
+          "type": "boolean"
+        },
+        "adjacent_room_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "maxLength": 80
+          },
+          "uniqueItems": true
+        },
+        "layers": {
+          "type": "array",
+          "items": {
+            "$ref": "./api.schema.json#/$defs/Layer"
+          }
+        },
+        "ambient_audio_asset_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$",
+              "maxLength": 80
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "canvas": {
+          "type": "object",
+          "properties": {
+            "width": {
+              "const": 1600
+            },
+            "height": {
+              "const": 900
+            }
+          },
+          "required": [
+            "width",
+            "height"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "initially_unlocked",
+        "adjacent_room_ids",
+        "layers",
+        "ambient_audio_asset_id",
+        "canvas"
+      ],
+      "additionalProperties": false
+    },
+    "Rule": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        },
+        "trigger": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "inspect",
+                "interact_object",
+                "puzzle_solved",
+                "insight_earned"
+              ]
+            },
+            "target_id": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$",
+              "maxLength": 80
+            },
+            "operation": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "open",
+                    "close",
+                    "activate"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "type",
+            "target_id",
+            "operation"
+          ],
+          "additionalProperties": false
+        },
+        "requires": {
+          "$ref": "#/$defs/Predicate"
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Effect"
+          }
+        },
+        "once": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "trigger",
+        "requires",
+        "effects",
+        "once"
+      ],
+      "additionalProperties": false
+    },
+    "Object": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        },
+        "room_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        },
+        "initial_state": {
+          "type": "string",
+          "enum": [
+            "closed",
+            "open",
+            "inactive",
+            "active",
+            "calibrated"
+          ]
+        },
+        "initially_visible": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        },
+        "hotspot": {
+          "$ref": "./api.schema.json#/$defs/Hotspot"
+        }
+      },
+      "required": [
+        "id",
+        "room_id",
+        "initial_state",
+        "initially_visible",
+        "description",
+        "hotspot"
+      ],
+      "additionalProperties": false
+    },
+    "Evidence": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        },
+        "room_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "asset_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$",
+              "maxLength": 80
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "annotations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "attribution_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        }
+      },
+      "required": [
+        "id",
+        "room_id",
+        "title",
+        "description",
+        "asset_id",
+        "annotations",
+        "attribution_id"
+      ],
+      "additionalProperties": false
+    },
+    "Puzzle": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "letter_reconstruction"
+            },
+            "room_id": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$",
+              "maxLength": 80
+            },
+            "requires": {
+              "$ref": "#/$defs/Predicate"
+            },
+            "presentation": {
+              "$ref": "./api.schema.json#/$defs/LetterPresentation"
+            },
+            "solution": {
+              "type": "object",
+              "properties": {
+                "placements": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "slot_id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]*$",
+                        "maxLength": 80
+                      },
+                      "piece_id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9_]*$",
+                        "maxLength": 80
+                      }
+                    },
+                    "required": [
+                      "slot_id",
+                      "piece_id"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "minItems": 4,
+                  "maxItems": 4
+                }
+              },
+              "required": [
+                "placements"
+              ],
+              "additionalProperties": false
+            },
+            "effects": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Effect"
+              }
+            }
+          },
+          "required": [
+            "id",
+            "room_id",
+            "requires",
+            "presentation",
+            "solution",
+            "effects"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "const": "machine_calibration"
+            },
+            "room_id": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$",
+              "maxLength": 80
+            },
+            "requires": {
+              "$ref": "#/$defs/Predicate"
+            },
+            "presentation": {
+              "$ref": "./api.schema.json#/$defs/CalibrationPresentation"
+            },
+            "solution": {
+              "type": "object",
+              "properties": {
+                "power_level": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 3
+                },
+                "phase": {
+                  "type": "string",
+                  "enum": [
+                    "amber",
+                    "violet",
+                    "cyan"
+                  ]
+                },
+                "stabilizer": {
+                  "type": "string",
+                  "enum": [
+                    "bypass",
+                    "engaged"
+                  ]
+                }
+              },
+              "required": [
+                "power_level",
+                "phase",
+                "stabilizer"
+              ],
+              "additionalProperties": false
+            },
+            "effects": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Effect"
+              }
+            }
+          },
+          "required": [
+            "id",
+            "room_id",
+            "requires",
+            "presentation",
+            "solution",
+            "effects"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "Deduction": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "maxLength": 80
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "requires": {
+          "$ref": "#/$defs/Predicate"
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Effect"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "evidence_ids",
+        "title",
+        "description",
+        "requires",
+        "effects"
+      ],
+      "additionalProperties": false
+    },
+    "Knowledge": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        },
+        "ghost_id": {
+          "type": "string",
+          "enum": [
+            "eleanor",
+            "thomas",
+            "clara"
+          ]
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "observation",
+            "belief",
+            "approved_evasion"
+          ]
+        },
+        "text": {
+          "type": "string"
+        },
+        "requires": {
+          "$ref": "#/$defs/Predicate"
+        },
+        "minimum_trust": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "maximum_suspicion": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "critical": {
+          "type": "boolean"
+        },
+        "supersedes_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "maxLength": 80
+          },
+          "uniqueItems": true
+        },
+        "fallback_text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "ghost_id",
+        "kind",
+        "text",
+        "requires",
+        "minimum_trust",
+        "maximum_suspicion",
+        "critical",
+        "supersedes_ids",
+        "fallback_text"
+      ],
+      "additionalProperties": false
+    },
+    "Ghost": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "enum": [
+            "eleanor",
+            "thomas",
+            "clara"
+          ]
+        },
+        "room_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        },
+        "name": {
+          "type": "string"
+        },
+        "personality": {
+          "type": "string"
+        },
+        "initial_trust": {
+          "const": 30
+        },
+        "initial_suspicion": {
+          "const": 10
+        },
+        "portrait_asset_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$",
+              "maxLength": 80
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "relevant_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "maxLength": 80
+          },
+          "uniqueItems": true
+        },
+        "generic_fallback": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "room_id",
+        "name",
+        "personality",
+        "initial_trust",
+        "initial_suspicion",
+        "portrait_asset_id",
+        "relevant_evidence_ids",
+        "generic_fallback"
+      ],
+      "additionalProperties": false
+    },
+    "Claim": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        },
+        "group": {
+          "type": "string",
+          "enum": [
+            "eleanor_action",
+            "eleanor_motive",
+            "thomas_action",
+            "thomas_motive",
+            "cause"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "correct": {
+          "type": "boolean"
+        },
+        "support_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "maxLength": 80
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "group",
+        "label",
+        "correct",
+        "support_evidence_ids"
+      ],
+      "additionalProperties": false
+    },
+    "EndingRule": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "enum": [
+            "truth_revealed",
+            "partial_truth",
+            "false_accusation"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "explanation": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "explanation"
+      ],
+      "additionalProperties": false
+    },
+    "Timeline": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "maxLength": 80
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fact": {
+          "type": "string"
+        },
+        "support_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "maxLength": 80
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "sequence",
+        "fact",
+        "support_evidence_ids"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

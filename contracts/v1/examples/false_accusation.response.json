@@ -1,0 +1,105 @@
+{
+  "request_id": "eacdcda7-8e85-515e-be69-a17767e2493f",
+  "accepted": true,
+  "outcome": "applied",
+  "state": {
+    "contract_version": "1.0.0",
+    "content_version": "1.0.0",
+    "session_id": "90ae746e-3347-40ce-a8f4-884995865ccb",
+    "revision": 1,
+    "mode": "demo",
+    "phase": "ended",
+    "current_room_id": "entrance_hall",
+    "rooms": [
+      {
+        "id": "entrance_hall",
+        "title": "Entrance Hall",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "library",
+        "title": "Library",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "study",
+        "title": "Study",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "laboratory",
+        "title": "Laboratory",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "grand_ballroom",
+        "title": "Grand Ballroom",
+        "unlocked": true,
+        "hint": null
+      },
+      {
+        "id": "hidden_passage",
+        "title": "Hidden Passage",
+        "unlocked": false,
+        "hint": "Continue your investigation."
+      }
+    ],
+    "scene": {
+      "room_id": "entrance_hall",
+      "title": "Entrance Hall",
+      "description": "Public contract fixture; no artwork or gameplay implementation is implied.",
+      "layers": [],
+      "hotspots": [],
+      "objects": [],
+      "ambient_audio_asset_id": null,
+      "canvas": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    "assets": [],
+    "evidence": [
+      {
+        "id": "gathering_photograph",
+        "title": "Gathering Photograph",
+        "description": "Synthetic public interface observation; not final story prose.",
+        "room_id": "grand_ballroom",
+        "asset_id": null,
+        "annotations": []
+      }
+    ],
+    "insights": [],
+    "puzzles": [],
+    "ghosts": [],
+    "dialogue": [],
+    "available_actions": [],
+    "events": [],
+    "progress": {
+      "earned": 1,
+      "total": 14,
+      "label": "Investigation begins"
+    },
+    "accusation": {
+      "eligible": false,
+      "hint": "Discover evidence before submitting a theory.",
+      "options": []
+    },
+    "ending": {
+      "id": "false_accusation",
+      "title": "False Accusation",
+      "explanation": "Synthetic terminal interface fixture, not a played ending.",
+      "supported_claim_ids": [],
+      "missing_summary": "Fixture only."
+    }
+  },
+  "feedback": {
+    "code": "fixture_applied",
+    "message": "Development contract fixture only; no actual action or inference occurred."
+  },
+  "new_events": [],
+  "dialogue_turn": null
+}

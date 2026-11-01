@@ -1,0 +1,507 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Haunted AI API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/v1/health": {
+      "get": {
+        "operationId": "get__api_v1_health",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Health"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/sessions": {
+      "post": {
+        "operationId": "post__api_v1_sessions",
+        "responses": {
+          "201": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/SessionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "./api.schema.json#/$defs/CreateRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/sessions/{session_id}": {
+      "get": {
+        "operationId": "get__api_v1_sessions_session_id",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/SessionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/api/v1/sessions/{session_id}/actions": {
+      "post": {
+        "operationId": "post__api_v1_sessions_session_id_actions",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/ActionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "./api.schema.json#/$defs/ActionRequest"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    },
+    "/api/v1/sessions/{session_id}/restart": {
+      "post": {
+        "operationId": "post__api_v1_sessions_session_id_restart",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/SessionResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Typed error; see semantics.md status mapping",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "./api.schema.json#/$defs/Error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "./api.schema.json#/$defs/RestartRequest"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+name: Setup and contracts
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, docs/project-management, chore/git-integration]
+permissions:
+  contents: read
+jobs:
+  setup-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install jsonschema==4.23.0
+      - run: python scripts/check_setup.py --full-schema

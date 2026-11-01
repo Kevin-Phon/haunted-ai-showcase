@@ -1,0 +1,160 @@
+[
+  {
+    "id": "art_entrance_hall",
+    "src": "/media/entrance_hall-scene-v1.png",
+    "kind": "room",
+    "attribution_id": "generated_entrance_hall_20261031",
+    "width": 1600,
+    "height": 900,
+    "bytes": 2568564,
+    "source_receipt": "Original generation receipt retained in private development archive.",
+    "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+    "license_note": "Generated asset; no third-party license asserted; model/version not exposed by tool",
+    "original_dimensions": [
+      1672,
+      941
+    ],
+    "transformation": "macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop"
+  },
+  {
+    "id": "art_library",
+    "src": "/media/library-scene-v1.png",
+    "kind": "room",
+    "attribution_id": "generated_library_20261031",
+    "width": 1600,
+    "height": 900,
+    "bytes": 2328938,
+    "source_receipt": "Original generation receipt retained in private development archive.",
+    "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+    "license_note": "Generated asset; no third-party license asserted; model/version not exposed by tool",
+    "original_dimensions": [
+      1672,
+      941
+    ],
+    "transformation": "macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop"
+  },
+  {
+    "id": "art_study",
+    "src": "/media/study-scene-v1.png",
+    "kind": "room",
+    "attribution_id": "generated_study_20261031",
+    "width": 1600,
+    "height": 900,
+    "bytes": 2175572,
+    "source_receipt": "Original generation receipt retained in private development archive.",
+    "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+    "license_note": "Generated asset; no third-party license asserted; model/version not exposed by tool",
+    "original_dimensions": [
+      1672,
+      941
+    ],
+    "transformation": "macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop"
+  },
+  {
+    "id": "art_laboratory",
+    "src": "/media/laboratory-scene-v1.png",
+    "kind": "room",
+    "attribution_id": "generated_laboratory_20261031",
+    "width": 1600,
+    "height": 900,
+    "bytes": 2323654,
+    "source_receipt": "Original generation receipt retained in private development archive.",
+    "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+    "license_note": "Generated asset; no third-party license asserted; model/version not exposed by tool",
+    "original_dimensions": [
+      1672,
+      941
+    ],
+    "transformation": "macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop"
+  },
+  {
+    "id": "art_grand_ballroom",
+    "src": "/media/grand_ballroom-scene-v1.png",
+    "kind": "room",
+    "attribution_id": "generated_grand_ballroom_20261031",
+    "width": 1600,
+    "height": 900,
+    "bytes": 2401090,
+    "source_receipt": "Original generation receipt retained in private development archive.",
+    "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+    "license_note": "Generated asset; no third-party license asserted; model/version not exposed by tool",
+    "original_dimensions": [
+      1672,
+      941
+    ],
+    "transformation": "macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop"
+  },
+  {
+    "id": "art_hidden_passage",
+    "src": "/media/hidden_passage-scene-v1.png",
+    "kind": "room",
+    "attribution_id": "generated_hidden_passage_20261031",
+    "width": 1600,
+    "height": 900,
+    "bytes": 2149684,
+    "source_receipt": "Original generation receipt retained in private development archive.",
+    "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+    "license_note": "Generated asset; no third-party license asserted; model/version not exposed by tool",
+    "original_dimensions": [
+      1672,
+      941
+    ],
+    "transformation": "macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop"
+  },
+  {
+    "id": "art_eleanor",
+    "src": "/media/eleanor-v1.png",
+    "kind": "portrait",
+    "attribution_id": "generated_eleanor_20261031",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2327444,
+    "source_receipt": "Original generation receipt retained in private development archive.",
+    "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+    "license_note": "Generated asset; no third-party license asserted; model/version not exposed by tool"
+  },
+  {
+    "id": "art_thomas",
+    "src": "/media/thomas-v1.png",
+    "kind": "portrait",
+    "attribution_id": "generated_thomas_20261031",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2210956,
+    "source_receipt": "Original generation receipt retained in private development archive.",
+    "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+    "license_note": "Generated asset; no third-party license asserted; model/version not exposed by tool"
+  },
+  {
+    "id": "art_clara",
+    "src": "/media/clara-v1.png",
+    "kind": "portrait",
+    "attribution_id": "generated_clara_20261031",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 2533330,
+    "source_receipt": "Original generation receipt retained in private development archive.",
+    "source": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images",
+    "license_note": "Generated asset; no third-party license asserted; model/version not exposed by tool"
+  },
+  {
+    "id": "audio_manor_ambience",
+    "src": "/media/manor-ambience-v1.wav",
+    "kind": "audio",
+    "attribution_id": "original_synth_audio_20261031",
+    "bytes": 352844,
+    "duration_seconds": 8,
+    "source": "Original sine synthesis; scripts/generate-audio.py; 2026-10-31",
+    "license_note": "Original project sound; no third-party samples"
+  },
+  {
+    "id": "audio_discovery",
+    "src": "/media/discovery-v1.wav",
+    "kind": "audio",
+    "attribution_id": "original_synth_audio_20261031",
+    "bytes": 66194,
+    "duration_seconds": 1.5,
+    "source": "Original sine synthesis; scripts/generate-audio.py; 2026-10-31",
+    "license_note": "Original project sound; no third-party samples"
+  }
+]

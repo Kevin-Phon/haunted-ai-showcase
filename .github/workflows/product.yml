@@ -1,0 +1,119 @@
+name: Product verification
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, docs/project-management, feature/frontend, feature/backend-ai, feature/game-data]
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    outputs:
+      data: ${{ steps.paths.outputs.data }}
+      backend: ${{ steps.paths.outputs.backend }}
+      frontend: ${{ steps.paths.outputs.frontend }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: paths
+        shell: bash
+        run: |
+          for component in data backend frontend; do
+            case "$component" in
+              data) manifest=game-data/requirements-validation.txt ;;
+              backend) manifest=apps/backend/requirements.lock ;;
+              frontend) manifest=apps/frontend/package-lock.json ;;
+            esac
+            if test -f "$manifest"; then
+              echo "$component=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "$component=false" >> "$GITHUB_OUTPUT"
+              echo "::notice::$component is absent on this revision; its checks are not run."
+            fi
+          done
+  data:
+    needs: inventory
+    if: needs.inventory.outputs.data == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r game-data/requirements-validation.txt
+      - run: python game-data/validate_content.py
+      - run: python -m unittest discover -s game-data/tests -v
+      - run: python scripts/check_setup.py --full-schema
+  backend:
+    needs: inventory
+    if: needs.inventory.outputs.backend == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r apps/backend/requirements.lock
+      - run: python -m pip install --no-deps -e apps/backend
+      - run: python -m pip check
+      - run: python -m ruff check apps/backend
+      - run: python -m ruff format --check apps/backend
+      - name: Backend and canonical-content tests
+        shell: bash
+        run: |
+          if test -f game-data/blackthorn_manor.json; then
+            export HAUNTED_CANONICAL_CONTENT="$GITHUB_WORKSPACE/game-data/blackthorn_manor.json"
+          else
+            echo "::notice::Canonical content is absent; canonical integration scenarios are not run."
+          fi
+          python -m pytest apps/backend/tests -q --tb=short
+      - run: python scripts/check_setup.py --full-schema
+  frontend:
+    needs: inventory
+    if: needs.inventory.outputs.frontend == 'true'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: apps/frontend/package-lock.json
+      - run: npm ci
+      - run: npm run generate:types
+      - run: git diff --exit-code -- src
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run format:check
+      - run: npm run build
+      - run: npm run check:bundle
+  integration:
+    needs: inventory
+    if: needs.inventory.outputs.data == 'true' && needs.inventory.outputs.backend == 'true' && needs.inventory.outputs.frontend == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: apps/frontend/package-lock.json
+      - run: python -m pip install -r apps/backend/requirements.lock
+      - run: python -m pip install --no-deps -e apps/backend
+      - name: Capture actual public API projections
+        run: python apps/frontend/scripts/capture-public-api.py --content game-data/blackthorn_manor.json --output "${{ runner.temp }}/haunted-public-audit.json"
+      - run: npm ci
+        working-directory: apps/frontend
+      - name: Verify UI against actual public API projections
+        working-directory: apps/frontend
+        env:
+          HAUNTED_PUBLIC_AUDIT: ${{ runner.temp }}/haunted-public-audit.json
+        run: npm test

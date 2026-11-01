@@ -1,0 +1,1905 @@
+{
+  "format_version": "1.0.0",
+  "content_version": "1.0.1",
+  "content_id": "blackthorn_manor",
+  "initial_room_id": "entrance_hall",
+  "rooms": [
+    {
+      "id": "entrance_hall",
+      "title": "Entrance Hall",
+      "description": "Rain taps the tall windows. Six paths radiate from a tarnished family crest; a clock holds its hands at midnight.",
+      "initially_unlocked": true,
+      "adjacent_room_ids": [
+        "library",
+        "study",
+        "laboratory",
+        "grand_ballroom",
+        "hidden_passage"
+      ],
+      "layers": [
+        {
+          "id": "layer_entrance_hall_backplate",
+          "asset_id": "art_entrance_hall",
+          "z_index": 0,
+          "parallax_factor": 0,
+          "decorative": true
+        }
+      ],
+      "ambient_audio_asset_id": "audio_manor_ambience",
+      "canvas": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "library",
+      "title": "Library",
+      "description": "Antique gold light grazes shelves and a writing desk. A violet silhouette waits beside a drawer of torn paper.",
+      "initially_unlocked": true,
+      "adjacent_room_ids": [
+        "entrance_hall"
+      ],
+      "layers": [
+        {
+          "id": "layer_library_backplate",
+          "asset_id": "art_library",
+          "z_index": 0,
+          "parallax_factor": 0,
+          "decorative": true
+        }
+      ],
+      "ambient_audio_asset_id": "audio_manor_ambience",
+      "canvas": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "study",
+      "title": "Study",
+      "description": "Elias kept his research here. Ink, household records and the outline of a concealed desk panel survive beneath the dust.",
+      "initially_unlocked": true,
+      "adjacent_room_ids": [
+        "entrance_hall"
+      ],
+      "layers": [
+        {
+          "id": "layer_study_backplate",
+          "asset_id": "art_study",
+          "z_index": 0,
+          "parallax_factor": 0,
+          "decorative": true
+        }
+      ],
+      "ambient_audio_asset_id": "audio_manor_ambience",
+      "canvas": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "laboratory",
+      "title": "Laboratory",
+      "description": "A spectral cyan pulse travels through a cracked crystal. The silent memory machine has three readable controls and a loose stabilizer socket.",
+      "initially_unlocked": true,
+      "adjacent_room_ids": [
+        "entrance_hall"
+      ],
+      "layers": [
+        {
+          "id": "layer_laboratory_backplate",
+          "asset_id": "art_laboratory",
+          "z_index": 0,
+          "parallax_factor": 0,
+          "decorative": true
+        }
+      ],
+      "ambient_audio_asset_id": "audio_manor_ambience",
+      "canvas": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "grand_ballroom",
+      "title": "Grand Ballroom",
+      "description": "Moonlight crosses an empty dance floor. In a silver frame, the last gathering continues to stare toward the hall.",
+      "initially_unlocked": true,
+      "adjacent_room_ids": [
+        "entrance_hall"
+      ],
+      "layers": [
+        {
+          "id": "layer_grand_ballroom_backplate",
+          "asset_id": "art_grand_ballroom",
+          "z_index": 0,
+          "parallax_factor": 0,
+          "decorative": true
+        }
+      ],
+      "ambient_audio_asset_id": "audio_manor_ambience",
+      "canvas": {
+        "width": 1600,
+        "height": 900
+      }
+    },
+    {
+      "id": "hidden_passage",
+      "title": "Hidden Passage",
+      "description": "A narrow service passage runs behind the hall. Cold light falls on an archival box, its old seal already broken.",
+      "initially_unlocked": false,
+      "adjacent_room_ids": [
+        "entrance_hall"
+      ],
+      "layers": [
+        {
+          "id": "layer_hidden_passage_backplate",
+          "asset_id": "art_hidden_passage",
+          "z_index": 0,
+          "parallax_factor": 0,
+          "decorative": true
+        }
+      ],
+      "ambient_audio_asset_id": "audio_manor_ambience",
+      "canvas": {
+        "width": 1600,
+        "height": 900
+      }
+    }
+  ],
+  "objects": [
+    {
+      "id": "hall_case_plaque",
+      "room_id": "entrance_hall",
+      "initial_state": "inactive",
+      "initially_visible": true,
+      "description": "1926: Elias Blackthorn died during a midnight gathering. The official account says accident. In 2026, the manor is haunted again. Inspect objects, compare collected evidence on the board, and question the spirits. Machine and letter controls also work without dragging.",
+      "hotspot": {
+        "id": "hs_hall_case_plaque",
+        "object_id": "hall_case_plaque",
+        "label": "Case plaque",
+        "focus_order": 0,
+        "bounds": {
+          "x": 0.7,
+          "y": 0.08,
+          "width": 0.18,
+          "height": 0.24
+        },
+        "interactions": []
+      }
+    },
+    {
+      "id": "hall_wall_panel",
+      "room_id": "entrance_hall",
+      "initial_state": "closed",
+      "initially_visible": false,
+      "description": "The matched household records reveal a seam beside the family crest. Its latch can be opened.",
+      "hotspot": {
+        "id": "hs_hall_wall_panel",
+        "object_id": "hall_wall_panel",
+        "label": "Service wall panel",
+        "focus_order": 1,
+        "bounds": {
+          "x": 0.735,
+          "y": 0.36,
+          "width": 0.16,
+          "height": 0.27
+        },
+        "interactions": [
+          {
+            "operation": "open",
+            "label": "Open service wall panel",
+            "enabled": true,
+            "disabled_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "library_writing_desk",
+      "room_id": "library",
+      "initial_state": "inactive",
+      "initially_visible": true,
+      "description": "Four scraps lie in the letter drawer. Read their sentence joins; arrange them into one continuous letter. You may select a piece and a slot instead of dragging.",
+      "hotspot": {
+        "id": "hs_library_writing_desk",
+        "object_id": "library_writing_desk",
+        "label": "Writing desk",
+        "focus_order": 2,
+        "bounds": {
+          "x": 0.105,
+          "y": 0.425,
+          "width": 0.35,
+          "height": 0.25
+        },
+        "interactions": []
+      }
+    },
+    {
+      "id": "library_letter_drawer",
+      "room_id": "library",
+      "initial_state": "closed",
+      "initially_visible": true,
+      "description": "An unlocked drawer contains four torn scraps. Opening it exposes the reconstruction puzzle.",
+      "hotspot": {
+        "id": "hs_library_letter_drawer",
+        "object_id": "library_letter_drawer",
+        "label": "Letter drawer",
+        "focus_order": 3,
+        "bounds": {
+          "x": 0.52,
+          "y": 0.48,
+          "width": 0.2,
+          "height": 0.18
+        },
+        "interactions": [
+          {
+            "operation": "open",
+            "label": "Open letter drawer",
+            "enabled": true,
+            "disabled_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "study_notebook",
+      "room_id": "study",
+      "initial_state": "inactive",
+      "initially_visible": true,
+      "description": "The scorched notebook is open to the machine operating instructions.",
+      "hotspot": {
+        "id": "hs_study_notebook",
+        "object_id": "study_notebook",
+        "label": "Damaged notebook",
+        "focus_order": 4,
+        "bounds": {
+          "x": 0.1,
+          "y": 0.46,
+          "width": 0.24,
+          "height": 0.2
+        },
+        "interactions": []
+      }
+    },
+    {
+      "id": "study_servant_log",
+      "room_id": "study",
+      "initial_state": "inactive",
+      "initially_visible": true,
+      "description": "A ruled household book records the route taken by the butler on the night of the gathering.",
+      "hotspot": {
+        "id": "hs_study_servant_log",
+        "object_id": "study_servant_log",
+        "label": "Servant log",
+        "focus_order": 5,
+        "bounds": {
+          "x": 0.37,
+          "y": 0.47,
+          "width": 0.24,
+          "height": 0.2
+        },
+        "interactions": []
+      }
+    },
+    {
+      "id": "study_desk_compartment",
+      "room_id": "study",
+      "initial_state": "closed",
+      "initially_visible": false,
+      "description": "The reconstructed letter names the seam beneath the blotter. An unlocked catch opens a maintenance compartment.",
+      "hotspot": {
+        "id": "hs_study_desk_compartment",
+        "object_id": "study_desk_compartment",
+        "label": "Desk compartment",
+        "focus_order": 6,
+        "bounds": {
+          "x": 0.66,
+          "y": 0.52,
+          "width": 0.22,
+          "height": 0.2
+        },
+        "interactions": [
+          {
+            "operation": "open",
+            "label": "Open desk compartment",
+            "enabled": true,
+            "disabled_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "lab_crystal_cradle",
+      "room_id": "laboratory",
+      "initial_state": "inactive",
+      "initially_visible": true,
+      "description": "A malfunctioning memory crystal glows cyan. A retaining strap keeps the crystal seated; inspection is sufficient to record it.",
+      "hotspot": {
+        "id": "hs_lab_crystal_cradle",
+        "object_id": "lab_crystal_cradle",
+        "label": "Crystal cradle",
+        "focus_order": 7,
+        "bounds": {
+          "x": 0.13,
+          "y": 0.275,
+          "width": 0.2,
+          "height": 0.35
+        },
+        "interactions": []
+      }
+    },
+    {
+      "id": "lab_memory_machine",
+      "room_id": "laboratory",
+      "initial_state": "inactive",
+      "initially_visible": true,
+      "description": "A power dial, phase selector and reseatable stabilizer socket surround a transcript window. Consult the notebook and safety report before calibration.",
+      "hotspot": {
+        "id": "hs_lab_memory_machine",
+        "object_id": "lab_memory_machine",
+        "label": "Memory machine",
+        "focus_order": 8,
+        "bounds": {
+          "x": 0.575,
+          "y": 0.25,
+          "width": 0.33,
+          "height": 0.4
+        },
+        "interactions": []
+      }
+    },
+    {
+      "id": "ballroom_photograph",
+      "room_id": "grand_ballroom",
+      "initial_state": "inactive",
+      "initially_visible": true,
+      "description": "The gathering photograph includes a reflection of the hall panel and the people standing near it.",
+      "hotspot": {
+        "id": "hs_ballroom_photograph",
+        "object_id": "ballroom_photograph",
+        "label": "Gathering photograph",
+        "focus_order": 9,
+        "bounds": {
+          "x": 0.365,
+          "y": 0.375,
+          "width": 0.1,
+          "height": 0.15
+        },
+        "interactions": []
+      }
+    },
+    {
+      "id": "passage_report_box",
+      "room_id": "hidden_passage",
+      "initial_state": "closed",
+      "initially_visible": true,
+      "description": "The broken archival seal hangs from an unlatched box. Open it, then inspect its contents.",
+      "hotspot": {
+        "id": "hs_passage_report_box",
+        "object_id": "passage_report_box",
+        "label": "Report box",
+        "focus_order": 10,
+        "bounds": {
+          "x": 0.6,
+          "y": 0.295,
+          "width": 0.24,
+          "height": 0.22
+        },
+        "interactions": [
+          {
+            "operation": "open",
+            "label": "Open report box",
+            "enabled": true,
+            "disabled_reason": null
+          }
+        ]
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "damaged_notebook",
+      "room_id": "study",
+      "title": "Damaged laboratory notebook",
+      "description": "Elias and Clara: Memory retention trials. Safe reading procedure: power level TWO; phase must match the crystal glow, CYAN. Reseat and ENGAGE the stabilizer before any run. A bypass may light the apparatus but cannot contain a memory load. Do not confuse restored power with restored stability.",
+      "asset_id": null,
+      "annotations": [
+        "The notebook records operating conditions, not the identity of a saboteur."
+      ],
+      "attribution_id": "story_text"
+    },
+    {
+      "id": "torn_letter",
+      "room_id": "library",
+      "title": "Eleanor’s reconstructed letter",
+      "description": "Clara is to be the subject of the midnight trial. The safety report says the memory load remains unstable. I cannot let Elias proceed with her. I disconnected the stabilizer, intending to stop the trial, not to hurt him. The service record is under the study blotter, behind the desk compartment. — Eleanor",
+      "asset_id": null,
+      "annotations": [
+        "The continuous sentence joins establish the reconstructed order. The named compartment can now be opened."
+      ],
+      "attribution_id": "story_text"
+    },
+    {
+      "id": "servant_log",
+      "room_id": "study",
+      "title": "Servant’s logbook",
+      "description": "Midnight gathering: Thomas Reed left the drawing room, passed the family crest in the Entrance Hall, then took the service route to the Laboratory. Margin: supply circuit restored; stabilizer not checked. This contradicts a claim that he stayed in the drawing room all night.",
+      "asset_id": null,
+      "annotations": [
+        "Compare the hall location with the gathering photograph. The route alone does not establish a murderous intention."
+      ],
+      "attribution_id": "story_text"
+    },
+    {
+      "id": "memory_crystal",
+      "room_id": "laboratory",
+      "title": "Malfunctioning memory crystal",
+      "description": "The crystal flickers CYAN but plays only broken syllables. Its readable memory is inaccessible until the machine is safely calibrated. The crystal stays in its cradle; the journal records its condition.",
+      "asset_id": null,
+      "annotations": [
+        "The glow provides the notebook’s phase reference. A flicker is not a complete recording."
+      ],
+      "attribution_id": "story_text"
+    },
+    {
+      "id": "maintenance_record",
+      "room_id": "study",
+      "title": "Hidden maintenance record",
+      "description": "Two distinct entries survive. Eleanor: stabilizer disconnected to stop use on Clara. Thomas: supply power restored; stabilizer remains disconnected. Thomas added: I thought a resumed demonstration would keep the family’s reputation intact. I did not understand the missing stabilizer. His signed annotation records his motive, not a claim that his repair was safe.",
+      "asset_id": null,
+      "annotations": [],
+      "attribution_id": "story_text"
+    },
+    {
+      "id": "gathering_photograph",
+      "room_id": "grand_ballroom",
+      "title": "Photograph of the gathering",
+      "description": "The silvered photograph shows Elias with the guests, Eleanor beside Clara, and Thomas reflected beside the hall’s family crest. His hand is on a narrow panel latch. The position matches the service route in the servant log.",
+      "asset_id": null,
+      "annotations": [
+        "Presence is not proof of intent. Linking this image with the route record locates the service panel."
+      ],
+      "attribution_id": "story_text"
+    },
+    {
+      "id": "sealed_report",
+      "room_id": "hidden_passage",
+      "title": "Sealed experimental report",
+      "description": "Confidential trial authorization. Proposed subject: Clara Whitmore. Unresolved risk: memory load without the stabilizer can destabilize the entire apparatus. For safe recovery reading, reseat and ENGAGE the disconnected stabilizer; use power TWO and phase CYAN as specified by the operating notebook. The report’s original seal was broken before the investigation.",
+      "asset_id": null,
+      "annotations": [],
+      "attribution_id": "story_text"
+    },
+    {
+      "id": "final_recording",
+      "room_id": "laboratory",
+      "title": "Elias’s final recording",
+      "description": "Recovered transcript: Thomas: The supply is back, sir. I wanted the demonstration to save the family name. Elias: The stabilizer is still disconnected. There is no time; I will start the load myself. [Switch. Rising oscillation.] Clara: Stop—the load is unstable! [The recording fractures.] The last captured run follows restored power with an uncontained memory load.",
+      "asset_id": null,
+      "annotations": [
+        "The transcript documents the fatal sequence. Eleanor’s motive is established by her letter, not by an omniscient recording."
+      ],
+      "attribution_id": "story_text"
+    }
+  ],
+  "puzzles": [
+    {
+      "id": "letter_reconstruction",
+      "room_id": "library",
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": [
+          {
+            "object_id": "library_letter_drawer",
+            "state": "open"
+          }
+        ]
+      },
+      "presentation": {
+        "pieces": [
+          {
+            "id": "letter_piece_a",
+            "text": "unstable. I cannot let Elias proceed with her. I disconnected the",
+            "asset_id": null
+          },
+          {
+            "id": "letter_piece_b",
+            "text": "the study blotter, behind the desk compartment. — Eleanor",
+            "asset_id": null
+          },
+          {
+            "id": "letter_piece_c",
+            "text": "Clara is to be the subject of the midnight trial. The safety report says the memory load remains",
+            "asset_id": null
+          },
+          {
+            "id": "letter_piece_d",
+            "text": "stabilizer, intending to stop the trial, not to hurt him. The service record is under",
+            "asset_id": null
+          }
+        ],
+        "slots": [
+          {
+            "id": "letter_slot_1",
+            "label": "Reading position 1"
+          },
+          {
+            "id": "letter_slot_2",
+            "label": "Reading position 2"
+          },
+          {
+            "id": "letter_slot_3",
+            "label": "Reading position 3"
+          },
+          {
+            "id": "letter_slot_4",
+            "label": "Reading position 4"
+          }
+        ]
+      },
+      "solution": {
+        "placements": [
+          {
+            "slot_id": "letter_slot_1",
+            "piece_id": "letter_piece_c"
+          },
+          {
+            "slot_id": "letter_slot_2",
+            "piece_id": "letter_piece_a"
+          },
+          {
+            "slot_id": "letter_slot_3",
+            "piece_id": "letter_piece_d"
+          },
+          {
+            "slot_id": "letter_slot_4",
+            "piece_id": "letter_piece_b"
+          }
+        ]
+      },
+      "effects": [
+        {
+          "kind": "grant_evidence",
+          "target_id": "torn_letter",
+          "state": null
+        },
+        {
+          "kind": "emit_event",
+          "target_id": "event_letter_whisper",
+          "state": null
+        }
+      ]
+    },
+    {
+      "id": "machine_calibration",
+      "room_id": "laboratory",
+      "requires": {
+        "all_evidence": [
+          "damaged_notebook",
+          "memory_crystal",
+          "sealed_report"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "presentation": {
+        "controls": [
+          {
+            "id": "power_level",
+            "kind": "integer",
+            "label": "Power level",
+            "minimum": 0,
+            "maximum": 3,
+            "step": 1
+          },
+          {
+            "id": "phase",
+            "kind": "choice",
+            "label": "Phase",
+            "options": [
+              {
+                "value": "amber",
+                "label": "Amber"
+              },
+              {
+                "value": "violet",
+                "label": "Violet"
+              },
+              {
+                "value": "cyan",
+                "label": "Cyan"
+              }
+            ]
+          },
+          {
+            "id": "stabilizer",
+            "kind": "choice",
+            "label": "Stabilizer",
+            "options": [
+              {
+                "value": "bypass",
+                "label": "Bypass"
+              },
+              {
+                "value": "engaged",
+                "label": "Engaged"
+              }
+            ]
+          }
+        ],
+        "instructions": "Read the notebook, observe the crystal, and consult the safety report. Select each setting; Engage means the disconnected stabilizer is reseated for a safe recovery reading. Incorrect settings shut down safely and may be retried."
+      },
+      "solution": {
+        "power_level": 2,
+        "phase": "cyan",
+        "stabilizer": "engaged"
+      },
+      "effects": [
+        {
+          "kind": "set_object_state",
+          "target_id": "lab_memory_machine",
+          "state": "calibrated"
+        },
+        {
+          "kind": "grant_evidence",
+          "target_id": "final_recording",
+          "state": null
+        },
+        {
+          "kind": "emit_event",
+          "target_id": "event_machine_echo",
+          "state": null
+        }
+      ]
+    }
+  ],
+  "deductions": [
+    {
+      "id": "deduction_hidden_route",
+      "evidence_ids": [
+        "servant_log",
+        "gathering_photograph"
+      ],
+      "title": "A route behind the crest",
+      "description": "The logged service route and reflected latch agree. A panel beside the hall crest is now identifiable.",
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": []
+    },
+    {
+      "id": "deduction_protective_sabotage",
+      "evidence_ids": [
+        "torn_letter",
+        "sealed_report"
+      ],
+      "title": "A protective intervention",
+      "description": "The letter admits disconnection; the report corroborates the intended subject and danger. Eleanor meant to stop use on Clara.",
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": []
+    },
+    {
+      "id": "deduction_partial_restart",
+      "evidence_ids": [
+        "servant_log",
+        "maintenance_record"
+      ],
+      "title": "Power without stability",
+      "description": "Thomas’s route and signed service entry establish a supply restart while the stabilizer remained disconnected.",
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": []
+    },
+    {
+      "id": "deduction_fatal_instability",
+      "evidence_ids": [
+        "damaged_notebook",
+        "final_recording"
+      ],
+      "title": "An uncontained memory load",
+      "description": "The operating warning explains the oscillation in the recording. Elias initiated the unstable run after power was restored.",
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": []
+    }
+  ],
+  "ghosts": [
+    {
+      "id": "eleanor",
+      "name": "Lady Eleanor Blackthorn",
+      "room_id": "library",
+      "personality": "Elegant, guarded, precise. Protects Clara and the family reputation; admits documented acts without claiming omniscience.",
+      "initial_trust": 30,
+      "initial_suspicion": 10,
+      "portrait_asset_id": "art_eleanor",
+      "relevant_evidence_ids": [
+        "torn_letter",
+        "sealed_report",
+        "maintenance_record"
+      ],
+      "generic_fallback": "The house remembers more than I can tell you yet. Bring a record, and ask me about what it actually says."
+    },
+    {
+      "id": "thomas",
+      "name": "Thomas Reed",
+      "room_id": "grand_ballroom",
+      "personality": "Nervous, observant, loyal. May use only the approved initial alibi until corrected; never repeat a superseded alibi.",
+      "initial_trust": 30,
+      "initial_suspicion": 10,
+      "portrait_asset_id": "art_thomas",
+      "relevant_evidence_ids": [
+        "servant_log",
+        "gathering_photograph",
+        "maintenance_record",
+        "final_recording"
+      ],
+      "generic_fallback": "I kept the household running. If you have a record of my route or work, show it to me; I will answer what I can."
+    },
+    {
+      "id": "clara",
+      "name": "Clara Whitmore",
+      "room_id": "laboratory",
+      "personality": "Brilliant, frustrated, technical but readable. Distinguishes observation from inference; will not invent eyewitness details.",
+      "initial_trust": 30,
+      "initial_suspicion": 10,
+      "portrait_asset_id": "art_clara",
+      "relevant_evidence_ids": [
+        "damaged_notebook",
+        "memory_crystal",
+        "sealed_report",
+        "final_recording"
+      ],
+      "generic_fallback": "We built a memory device, not a guarantee of safety. Find the operating notes and the safety report; I can help you read the evidence."
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "eleanor_research",
+      "ghost_id": "eleanor",
+      "kind": "observation",
+      "text": "Elias kept researching memories beyond death. I knew of that work, though I did not design his machine.",
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": null,
+      "maximum_suspicion": null,
+      "critical": false,
+      "supersedes_ids": [],
+      "fallback_text": "Elias kept researching memories beyond death. I knew of that work, though I did not design his machine."
+    },
+    {
+      "id": "eleanor_admission",
+      "ghost_id": "eleanor",
+      "kind": "observation",
+      "text": "Yes. I disconnected the stabilizer to stop the trial. My letter names what I did. I did not intend Elias to die.",
+      "requires": {
+        "all_evidence": [
+          "torn_letter"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": null,
+      "maximum_suspicion": null,
+      "critical": true,
+      "supersedes_ids": [],
+      "fallback_text": "Yes. I disconnected the stabilizer to stop the trial. My letter names what I did. I did not intend Elias to die."
+    },
+    {
+      "id": "eleanor_protection",
+      "ghost_id": "eleanor",
+      "kind": "observation",
+      "text": "Clara was to be the subject. My letter and that report explain why I wanted the trial stopped: she was in danger.",
+      "requires": {
+        "all_evidence": [
+          "torn_letter",
+          "sealed_report"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": null,
+      "maximum_suspicion": null,
+      "critical": true,
+      "supersedes_ids": [],
+      "fallback_text": "Clara was to be the subject. My letter and that report explain why I wanted the trial stopped: she was in danger."
+    },
+    {
+      "id": "eleanor_grief",
+      "ghost_id": "eleanor",
+      "kind": "belief",
+      "text": "I thought stopping one trial could still save everything. I cannot turn that belief into an account of actions I never saw.",
+      "requires": {
+        "all_evidence": [
+          "torn_letter"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": 50,
+      "maximum_suspicion": 60,
+      "critical": false,
+      "supersedes_ids": [],
+      "fallback_text": "I thought stopping one trial could still save everything. I cannot turn that belief into an account of actions I never saw."
+    },
+    {
+      "id": "thomas_initial_alibi",
+      "ghost_id": "thomas",
+      "kind": "approved_evasion",
+      "text": "I remained in the drawing room, attending to the gathering.",
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": null,
+      "maximum_suspicion": null,
+      "critical": false,
+      "supersedes_ids": [],
+      "fallback_text": "I remained in the drawing room, attending to the gathering."
+    },
+    {
+      "id": "thomas_route_admission",
+      "ghost_id": "thomas",
+      "kind": "observation",
+      "text": "The log is right. I left the drawing room and took the service route. My earlier claim that I stayed was false.",
+      "requires": {
+        "all_evidence": [
+          "servant_log"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": null,
+      "maximum_suspicion": null,
+      "critical": true,
+      "supersedes_ids": [
+        "thomas_initial_alibi"
+      ],
+      "fallback_text": "The log is right. I left the drawing room and took the service route. My earlier claim that I stayed was false."
+    },
+    {
+      "id": "thomas_panel_visit",
+      "ghost_id": "thomas",
+      "kind": "observation",
+      "text": "That is me beside the crest. The panel led to the service passage. The photograph locates me; it does not tell you why I went.",
+      "requires": {
+        "all_evidence": [
+          "gathering_photograph",
+          "servant_log"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": null,
+      "maximum_suspicion": null,
+      "critical": false,
+      "supersedes_ids": [
+        "thomas_initial_alibi"
+      ],
+      "fallback_text": "That is me beside the crest. The panel led to the service passage. The photograph locates me; it does not tell you why I went."
+    },
+    {
+      "id": "thomas_restart_admission",
+      "ghost_id": "thomas",
+      "kind": "observation",
+      "text": "I restored the supply circuit without checking the stabilizer. My signed note says why: I thought resuming the demonstration would protect the family’s reputation. I did not intend a death.",
+      "requires": {
+        "all_evidence": [
+          "servant_log",
+          "maintenance_record"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": null,
+      "maximum_suspicion": null,
+      "critical": true,
+      "supersedes_ids": [
+        "thomas_initial_alibi"
+      ],
+      "fallback_text": "I restored the supply circuit without checking the stabilizer. My signed note says why: I thought resuming the demonstration would protect the family’s reputation. I did not intend a death."
+    },
+    {
+      "id": "thomas_recording_admission",
+      "ghost_id": "thomas",
+      "kind": "observation",
+      "text": "The recovered words are mine. I reported power restored; Elias chose to start the load. I did not understand the danger of the disconnected stabilizer.",
+      "requires": {
+        "all_evidence": [
+          "final_recording"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": null,
+      "maximum_suspicion": null,
+      "critical": true,
+      "supersedes_ids": [
+        "thomas_initial_alibi"
+      ],
+      "fallback_text": "The recovered words are mine. I reported power restored; Elias chose to start the load. I did not understand the danger of the disconnected stabilizer."
+    },
+    {
+      "id": "thomas_remorse",
+      "ghost_id": "thomas",
+      "kind": "belief",
+      "text": "I mistook keeping appearances for protecting people. That was my belief; the service record is the evidence of my work.",
+      "requires": {
+        "all_evidence": [
+          "maintenance_record"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": 50,
+      "maximum_suspicion": 60,
+      "critical": false,
+      "supersedes_ids": [
+        "thomas_initial_alibi"
+      ],
+      "fallback_text": "I mistook keeping appearances for protecting people. That was my belief; the service record is the evidence of my work."
+    },
+    {
+      "id": "clara_research",
+      "ghost_id": "clara",
+      "kind": "belief",
+      "text": "I helped Elias develop the memory device. I do not accept the official account as a complete explanation.",
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": null,
+      "maximum_suspicion": null,
+      "critical": false,
+      "supersedes_ids": [],
+      "fallback_text": "I helped Elias develop the memory device. I do not accept the official account as a complete explanation."
+    },
+    {
+      "id": "clara_controls",
+      "ghost_id": "clara",
+      "kind": "observation",
+      "text": "The notebook says power two and phase matching the crystal. The crystal is cyan. The safety report must settle the stabilizer condition; restored supply alone is not enough.",
+      "requires": {
+        "all_evidence": [
+          "damaged_notebook",
+          "memory_crystal"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": null,
+      "maximum_suspicion": null,
+      "critical": true,
+      "supersedes_ids": [],
+      "fallback_text": "The notebook says power two and phase matching the crystal. The crystal is cyan. The safety report must settle the stabilizer condition; restored supply alone is not enough."
+    },
+    {
+      "id": "clara_subject",
+      "ghost_id": "clara",
+      "kind": "observation",
+      "text": "The report names me as the proposed subject and documents unresolved danger. For safe recovery reading, it says to reseat and engage the stabilizer.",
+      "requires": {
+        "all_evidence": [
+          "sealed_report"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": null,
+      "maximum_suspicion": null,
+      "critical": true,
+      "supersedes_ids": [],
+      "fallback_text": "The report names me as the proposed subject and documents unresolved danger. For safe recovery reading, it says to reseat and engage the stabilizer."
+    },
+    {
+      "id": "clara_fatal_sequence",
+      "ghost_id": "clara",
+      "kind": "observation",
+      "text": "The recording and notebook agree: power returned while the stabilizer was disconnected, then Elias initiated the load. That explains instability; it does not establish anyone’s murderous intent.",
+      "requires": {
+        "all_evidence": [
+          "damaged_notebook",
+          "final_recording"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": null,
+      "maximum_suspicion": null,
+      "critical": true,
+      "supersedes_ids": [],
+      "fallback_text": "The recording and notebook agree: power returned while the stabilizer was disconnected, then Elias initiated the load. That explains instability; it does not establish anyone’s murderous intent."
+    },
+    {
+      "id": "clara_memory_belief",
+      "ghost_id": "clara",
+      "kind": "belief",
+      "text": "I believe the broken echoes keep this house awake. That is my interpretation of our memory work, not proof that any of us foresaw the haunting.",
+      "requires": {
+        "all_evidence": [
+          "memory_crystal"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "minimum_trust": 50,
+      "maximum_suspicion": 60,
+      "critical": false,
+      "supersedes_ids": [],
+      "fallback_text": "I believe the broken echoes keep this house awake. That is my interpretation of our memory work, not proof that any of us foresaw the haunting."
+    }
+  ],
+  "rules": [
+    {
+      "id": "discover_damaged_notebook",
+      "trigger": {
+        "type": "inspect",
+        "target_id": "hs_study_notebook",
+        "operation": null
+      },
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": [
+        {
+          "kind": "grant_evidence",
+          "target_id": "damaged_notebook",
+          "state": null
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "discover_servant_log",
+      "trigger": {
+        "type": "inspect",
+        "target_id": "hs_study_servant_log",
+        "operation": null
+      },
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": [
+        {
+          "kind": "grant_evidence",
+          "target_id": "servant_log",
+          "state": null
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "discover_memory_crystal",
+      "trigger": {
+        "type": "inspect",
+        "target_id": "hs_lab_crystal_cradle",
+        "operation": null
+      },
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": [
+        {
+          "kind": "grant_evidence",
+          "target_id": "memory_crystal",
+          "state": null
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "discover_gathering_photograph",
+      "trigger": {
+        "type": "inspect",
+        "target_id": "hs_ballroom_photograph",
+        "operation": null
+      },
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": [
+        {
+          "kind": "grant_evidence",
+          "target_id": "gathering_photograph",
+          "state": null
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "open_letter_drawer",
+      "trigger": {
+        "type": "interact_object",
+        "target_id": "library_letter_drawer",
+        "operation": "open"
+      },
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": [
+          {
+            "object_id": "library_letter_drawer",
+            "state": "closed"
+          }
+        ]
+      },
+      "effects": [
+        {
+          "kind": "set_object_state",
+          "target_id": "library_letter_drawer",
+          "state": "open"
+        },
+        {
+          "kind": "enable_puzzle",
+          "target_id": "letter_reconstruction",
+          "state": null
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "open_study_compartment",
+      "trigger": {
+        "type": "interact_object",
+        "target_id": "study_desk_compartment",
+        "operation": "open"
+      },
+      "requires": {
+        "all_evidence": [
+          "torn_letter"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": [
+          {
+            "object_id": "study_desk_compartment",
+            "state": "closed"
+          }
+        ]
+      },
+      "effects": [
+        {
+          "kind": "set_object_state",
+          "target_id": "study_desk_compartment",
+          "state": "open"
+        },
+        {
+          "kind": "grant_evidence",
+          "target_id": "maintenance_record",
+          "state": null
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "open_hall_panel",
+      "trigger": {
+        "type": "interact_object",
+        "target_id": "hall_wall_panel",
+        "operation": "open"
+      },
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [
+          "deduction_hidden_route"
+        ],
+        "all_puzzles": [],
+        "object_states": [
+          {
+            "object_id": "hall_wall_panel",
+            "state": "closed"
+          }
+        ]
+      },
+      "effects": [
+        {
+          "kind": "set_object_state",
+          "target_id": "hall_wall_panel",
+          "state": "open"
+        },
+        {
+          "kind": "unlock_room",
+          "target_id": "hidden_passage",
+          "state": null
+        },
+        {
+          "kind": "emit_event",
+          "target_id": "event_passage_revealed",
+          "state": null
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "open_report_box",
+      "trigger": {
+        "type": "interact_object",
+        "target_id": "passage_report_box",
+        "operation": "open"
+      },
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": [
+          {
+            "object_id": "passage_report_box",
+            "state": "closed"
+          }
+        ]
+      },
+      "effects": [
+        {
+          "kind": "set_object_state",
+          "target_id": "passage_report_box",
+          "state": "open"
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "discover_sealed_report",
+      "trigger": {
+        "type": "inspect",
+        "target_id": "hs_passage_report_box",
+        "operation": null
+      },
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": [
+          {
+            "object_id": "passage_report_box",
+            "state": "open"
+          }
+        ]
+      },
+      "effects": [
+        {
+          "kind": "grant_evidence",
+          "target_id": "sealed_report",
+          "state": null
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "enable_calibration",
+      "trigger": {
+        "type": "inspect",
+        "target_id": "hs_lab_memory_machine",
+        "operation": null
+      },
+      "requires": {
+        "all_evidence": [
+          "damaged_notebook",
+          "memory_crystal",
+          "sealed_report"
+        ],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": [
+        {
+          "kind": "enable_puzzle",
+          "target_id": "machine_calibration",
+          "state": null
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "letter_reveals_compartment",
+      "trigger": {
+        "type": "puzzle_solved",
+        "target_id": "letter_reconstruction",
+        "operation": null
+      },
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": [
+        {
+          "kind": "reveal_object",
+          "target_id": "study_desk_compartment",
+          "state": null
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "route_reveals_panel",
+      "trigger": {
+        "type": "insight_earned",
+        "target_id": "deduction_hidden_route",
+        "operation": null
+      },
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": [
+        {
+          "kind": "reveal_object",
+          "target_id": "hall_wall_panel",
+          "state": null
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "resonance_after_deduction_protective_sabotage",
+      "trigger": {
+        "type": "insight_earned",
+        "target_id": "deduction_protective_sabotage",
+        "operation": null
+      },
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [
+          "deduction_protective_sabotage",
+          "deduction_partial_restart",
+          "deduction_fatal_instability"
+        ],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": [
+        {
+          "kind": "emit_event",
+          "target_id": "event_truth_connections",
+          "state": null
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "resonance_after_deduction_partial_restart",
+      "trigger": {
+        "type": "insight_earned",
+        "target_id": "deduction_partial_restart",
+        "operation": null
+      },
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [
+          "deduction_protective_sabotage",
+          "deduction_partial_restart",
+          "deduction_fatal_instability"
+        ],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": [
+        {
+          "kind": "emit_event",
+          "target_id": "event_truth_connections",
+          "state": null
+        }
+      ],
+      "once": true
+    },
+    {
+      "id": "resonance_after_deduction_fatal_instability",
+      "trigger": {
+        "type": "insight_earned",
+        "target_id": "deduction_fatal_instability",
+        "operation": null
+      },
+      "requires": {
+        "all_evidence": [],
+        "all_insights": [
+          "deduction_protective_sabotage",
+          "deduction_partial_restart",
+          "deduction_fatal_instability"
+        ],
+        "all_puzzles": [],
+        "object_states": []
+      },
+      "effects": [
+        {
+          "kind": "emit_event",
+          "target_id": "event_truth_connections",
+          "state": null
+        }
+      ],
+      "once": true
+    }
+  ],
+  "claims": [
+    {
+      "id": "eleanor_disconnected_stabilizer",
+      "group": "eleanor_action",
+      "label": "Eleanor disconnected the stabilizer.",
+      "correct": true,
+      "support_evidence_ids": [
+        "torn_letter",
+        "maintenance_record"
+      ]
+    },
+    {
+      "id": "eleanor_protected_clara",
+      "group": "eleanor_motive",
+      "label": "Eleanor acted to protect Clara.",
+      "correct": true,
+      "support_evidence_ids": [
+        "torn_letter",
+        "sealed_report"
+      ]
+    },
+    {
+      "id": "thomas_restored_power",
+      "group": "thomas_action",
+      "label": "Thomas restored supply power.",
+      "correct": true,
+      "support_evidence_ids": [
+        "servant_log",
+        "maintenance_record"
+      ]
+    },
+    {
+      "id": "thomas_protected_reputation",
+      "group": "thomas_motive",
+      "label": "Thomas acted to protect the family reputation.",
+      "correct": true,
+      "support_evidence_ids": [
+        "maintenance_record"
+      ]
+    },
+    {
+      "id": "unstable_run_killed_elias",
+      "group": "cause",
+      "label": "Elias initiated an unstable memory run that killed him.",
+      "correct": true,
+      "support_evidence_ids": [
+        "damaged_notebook",
+        "final_recording"
+      ]
+    },
+    {
+      "id": "eleanor_no_intervention",
+      "group": "eleanor_action",
+      "label": "Eleanor made no change to the device.",
+      "correct": false,
+      "support_evidence_ids": []
+    },
+    {
+      "id": "eleanor_intended_murder",
+      "group": "eleanor_motive",
+      "label": "Eleanor intended Elias’s death.",
+      "correct": false,
+      "support_evidence_ids": []
+    },
+    {
+      "id": "thomas_no_restart",
+      "group": "thomas_action",
+      "label": "Thomas never restored the supply.",
+      "correct": false,
+      "support_evidence_ids": []
+    },
+    {
+      "id": "thomas_intended_murder",
+      "group": "thomas_motive",
+      "label": "Thomas intended Elias’s death.",
+      "correct": false,
+      "support_evidence_ids": []
+    },
+    {
+      "id": "ordinary_accident",
+      "group": "cause",
+      "label": "An ordinary accident unrelated to the experimental machine killed Elias.",
+      "correct": false,
+      "support_evidence_ids": []
+    },
+    {
+      "id": "eleanor_action_unknown",
+      "group": "eleanor_action",
+      "label": "The eleanor action remains unresolved.",
+      "correct": false,
+      "support_evidence_ids": []
+    },
+    {
+      "id": "eleanor_motive_unknown",
+      "group": "eleanor_motive",
+      "label": "The eleanor motive remains unresolved.",
+      "correct": false,
+      "support_evidence_ids": []
+    },
+    {
+      "id": "thomas_action_unknown",
+      "group": "thomas_action",
+      "label": "The thomas action remains unresolved.",
+      "correct": false,
+      "support_evidence_ids": []
+    },
+    {
+      "id": "thomas_motive_unknown",
+      "group": "thomas_motive",
+      "label": "The thomas motive remains unresolved.",
+      "correct": false,
+      "support_evidence_ids": []
+    },
+    {
+      "id": "cause_unknown",
+      "group": "cause",
+      "label": "The cause remains unresolved.",
+      "correct": false,
+      "support_evidence_ids": []
+    }
+  ],
+  "endings": [
+    {
+      "id": "truth_revealed",
+      "title": "Truth Revealed",
+      "explanation": "You distinguished intervention, partial restart and fatal consequence. Eleanor meant to protect Clara; Thomas meant to protect the family reputation; Elias initiated the unstable run. The full evidence and deductions support your account."
+    },
+    {
+      "id": "partial_truth",
+      "title": "Partial Truth",
+      "explanation": "Some of your theory is supported, but the complete chain of responsibility or motive is unresolved. A supported act alone does not prove the whole sequence or an intention to kill."
+    },
+    {
+      "id": "false_accusation",
+      "title": "False Accusation",
+      "explanation": "None of the submitted claims was correctly supported by its required records. Presence and suspicion do not establish responsibility. Begin a new investigation to test another theory."
+    }
+  ],
+  "timeline": [
+    {
+      "id": "t01_research",
+      "sequence": 1,
+      "fact": "Elias and Clara develop an experimental memory-preservation device.",
+      "support_evidence_ids": [
+        "damaged_notebook",
+        "sealed_report"
+      ]
+    },
+    {
+      "id": "t02_intended_subject",
+      "sequence": 2,
+      "fact": "Elias intends to use the unsafe device on Clara; Eleanor learns of the danger.",
+      "support_evidence_ids": [
+        "torn_letter",
+        "sealed_report"
+      ]
+    },
+    {
+      "id": "t03_sabotage",
+      "sequence": 3,
+      "fact": "Eleanor disconnects the stabilizer to prevent use on Clara, not to kill Elias.",
+      "support_evidence_ids": [
+        "torn_letter",
+        "maintenance_record"
+      ]
+    },
+    {
+      "id": "t04_partial_restart",
+      "sequence": 4,
+      "fact": "Thomas restores the supply while the stabilizer remains disconnected, intending to protect the family reputation.",
+      "support_evidence_ids": [
+        "servant_log",
+        "maintenance_record"
+      ]
+    },
+    {
+      "id": "t05_fatal_run",
+      "sequence": 5,
+      "fact": "Elias initiates the unstable memory load during the midnight gathering and dies from the experiment.",
+      "support_evidence_ids": [
+        "damaged_notebook",
+        "final_recording"
+      ]
+    },
+    {
+      "id": "t06_aftermath",
+      "sequence": 6,
+      "fact": "The official account says accident; damaged memory echoes remain associated with the haunting.",
+      "support_evidence_ids": [
+        "memory_crystal",
+        "final_recording"
+      ]
+    },
+    {
+      "id": "t07_investigation",
+      "sequence": 7,
+      "fact": "In 2026 the detective examines the surviving records and questions three spirits.",
+      "support_evidence_ids": [
+        "gathering_photograph"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "event_letter_whisper",
+      "cue_id": "event_letter_whisper",
+      "summary": "A violet silhouette appears beside the reconstructed letter. Eleanor’s presence is felt; the journal records the discovery."
+    },
+    {
+      "id": "event_passage_revealed",
+      "cue_id": "event_passage_revealed",
+      "summary": "Dust lifts from the open hall panel. The Hidden Passage is now accessible."
+    },
+    {
+      "id": "event_machine_echo",
+      "cue_id": "event_machine_echo",
+      "summary": "Cyan light steadies. Elias’s final recording becomes readable in the journal; sound is optional."
+    },
+    {
+      "id": "event_truth_connections",
+      "cue_id": "event_truth_connections",
+      "summary": "The three responsibility connections resonate together. The board explains intervention, partial restart and consequence."
+    }
+  ],
+  "assets": [
+    {
+      "id": "art_entrance_hall",
+      "kind": "image",
+      "src": "media/entrance_hall-scene-v1.png",
+      "alt": "Moonlit gothic hall with twin staircases and antique gold crest.",
+      "attribution_id": "generated_entrance_hall_20261031",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "id": "art_library",
+      "kind": "image",
+      "src": "media/library-scene-v1.png",
+      "alt": "Moonlit bookshelves, writing desk and letter drawer.",
+      "attribution_id": "generated_library_20261031",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "id": "art_study",
+      "kind": "image",
+      "src": "media/study-scene-v1.png",
+      "alt": "Research desk with notebook, household log and leather blotter.",
+      "attribution_id": "generated_study_20261031",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "id": "art_laboratory",
+      "kind": "image",
+      "src": "media/laboratory-scene-v1.png",
+      "alt": "Crystal cradle and brass memory apparatus in a gothic laboratory.",
+      "attribution_id": "generated_laboratory_20261031",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "id": "art_grand_ballroom",
+      "kind": "image",
+      "src": "media/grand_ballroom-scene-v1.png",
+      "alt": "Moonlit ballroom with chandelier, framed gathering photograph and open floor.",
+      "attribution_id": "generated_grand_ballroom_20261031",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "id": "art_hidden_passage",
+      "kind": "image",
+      "src": "media/hidden_passage-scene-v1.png",
+      "alt": "Narrow stone service passage with an archival box on a shelf.",
+      "attribution_id": "generated_hidden_passage_20261031",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "id": "art_eleanor",
+      "kind": "image",
+      "src": "media/eleanor-v1.png",
+      "alt": "Fictional portrait of Lady Eleanor Blackthorn in violet spectral mist.",
+      "attribution_id": "generated_eleanor_20261031",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "art_thomas",
+      "kind": "image",
+      "src": "media/thomas-v1.png",
+      "alt": "Fictional portrait of Thomas Reed with a nervous expression in cool spectral light.",
+      "attribution_id": "generated_thomas_20261031",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "art_clara",
+      "kind": "image",
+      "src": "media/clara-v1.png",
+      "alt": "Fictional portrait of Clara Whitmore in cyan spectral light.",
+      "attribution_id": "generated_clara_20261031",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "audio_manor_ambience",
+      "kind": "audio",
+      "src": "media/manor-ambience-v1.wav",
+      "alt": "Optional original synthesized manor ambience.",
+      "attribution_id": "original_synth_audio_20261031",
+      "width": null,
+      "height": null
+    },
+    {
+      "id": "audio_discovery",
+      "kind": "audio",
+      "src": "media/discovery-v1.wav",
+      "alt": "Optional original synthesized discovery cue.",
+      "attribution_id": "original_synth_audio_20261031",
+      "width": null,
+      "height": null
+    }
+  ],
+  "attributions": [
+    {
+      "id": "story_text",
+      "origin": "generated",
+      "creator": "Kevin (approved concept); Codex (AI-assisted prose and structured content)",
+      "source_url": null,
+      "license": "No separate asset/content license declared here; repository owner must select publication license.",
+      "license_url": null,
+      "notes": "Fiction based on the supplied approved gameplay and coordinator-frozen contract. Not historical evidence. No third-party prose, art, audio or fonts included. See PROVENANCE.md for missing asset inventory.",
+      "generation_tool": "Codex; exact serving model not independently verified"
+    },
+    {
+      "id": "generated_entrance_hall_20261031",
+      "origin": "generated",
+      "creator": "Kevin’s Haunted AI project; Codex-assisted OpenAI imagegen",
+      "source_url": null,
+      "license": "Release license not selected; no third-party license or exclusive copyright asserted.",
+      "license_url": null,
+      "notes": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images; original generation receipt retained in private development archive; macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop; no external reference images; source retained by Frontend.",
+      "generation_tool": "OpenAI built-in imagegen; model/version not exposed"
+    },
+    {
+      "id": "generated_library_20261031",
+      "origin": "generated",
+      "creator": "Kevin’s Haunted AI project; Codex-assisted OpenAI imagegen",
+      "source_url": null,
+      "license": "Release license not selected; no third-party license or exclusive copyright asserted.",
+      "license_url": null,
+      "notes": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images; original generation receipt retained in private development archive; macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop; no external reference images; source retained by Frontend.",
+      "generation_tool": "OpenAI built-in imagegen; model/version not exposed"
+    },
+    {
+      "id": "generated_study_20261031",
+      "origin": "generated",
+      "creator": "Kevin’s Haunted AI project; Codex-assisted OpenAI imagegen",
+      "source_url": null,
+      "license": "Release license not selected; no third-party license or exclusive copyright asserted.",
+      "license_url": null,
+      "notes": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images; original generation receipt retained in private development archive; macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop; no external reference images; source retained by Frontend.",
+      "generation_tool": "OpenAI built-in imagegen; model/version not exposed"
+    },
+    {
+      "id": "generated_laboratory_20261031",
+      "origin": "generated",
+      "creator": "Kevin’s Haunted AI project; Codex-assisted OpenAI imagegen",
+      "source_url": null,
+      "license": "Release license not selected; no third-party license or exclusive copyright asserted.",
+      "license_url": null,
+      "notes": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images; original generation receipt retained in private development archive; macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop; no external reference images; source retained by Frontend.",
+      "generation_tool": "OpenAI built-in imagegen; model/version not exposed"
+    },
+    {
+      "id": "generated_grand_ballroom_20261031",
+      "origin": "generated",
+      "creator": "Kevin’s Haunted AI project; Codex-assisted OpenAI imagegen",
+      "source_url": null,
+      "license": "Release license not selected; no third-party license or exclusive copyright asserted.",
+      "license_url": null,
+      "notes": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images; original generation receipt retained in private development archive; macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop; no external reference images; source retained by Frontend.",
+      "generation_tool": "OpenAI built-in imagegen; model/version not exposed"
+    },
+    {
+      "id": "generated_hidden_passage_20261031",
+      "origin": "generated",
+      "creator": "Kevin’s Haunted AI project; Codex-assisted OpenAI imagegen",
+      "source_url": null,
+      "license": "Release license not selected; no third-party license or exclusive copyright asserted.",
+      "license_url": null,
+      "notes": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images; original generation receipt retained in private development archive; macOS sips -z 900 1600; exact raster resampling, approved by Kevin2026-10-31; no crop; no external reference images; source retained by Frontend.",
+      "generation_tool": "OpenAI built-in imagegen; model/version not exposed"
+    },
+    {
+      "id": "generated_eleanor_20261031",
+      "origin": "generated",
+      "creator": "Kevin’s Haunted AI project; Codex-assisted OpenAI imagegen",
+      "source_url": null,
+      "license": "Release license not selected; no third-party license or exclusive copyright asserted.",
+      "license_url": null,
+      "notes": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images; original generation receipt retained in private development archive; Unmodified tool output; no external reference images; source retained by Frontend.",
+      "generation_tool": "OpenAI built-in imagegen; model/version not exposed"
+    },
+    {
+      "id": "generated_thomas_20261031",
+      "origin": "generated",
+      "creator": "Kevin’s Haunted AI project; Codex-assisted OpenAI imagegen",
+      "source_url": null,
+      "license": "Release license not selected; no third-party license or exclusive copyright asserted.",
+      "license_url": null,
+      "notes": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images; original generation receipt retained in private development archive; Unmodified tool output; no external reference images; source retained by Frontend.",
+      "generation_tool": "OpenAI built-in imagegen; model/version not exposed"
+    },
+    {
+      "id": "generated_clara_20261031",
+      "origin": "generated",
+      "creator": "Kevin’s Haunted AI project; Codex-assisted OpenAI imagegen",
+      "source_url": null,
+      "license": "Release license not selected; no third-party license or exclusive copyright asserted.",
+      "license_url": null,
+      "notes": "OpenAI built-in imagegen; original project prompt; 2026-10-31; no reference images; original generation receipt retained in private development archive; Unmodified tool output; no external reference images; source retained by Frontend.",
+      "generation_tool": "OpenAI built-in imagegen; model/version not exposed"
+    },
+    {
+      "id": "original_synth_audio_20261031",
+      "origin": "original",
+      "creator": "Kevin’s Haunted AI project; Codex-assisted original synthesis code",
+      "source_url": null,
+      "license": "Release license not selected; original project synthesis, no third-party samples.",
+      "license_url": null,
+      "notes": "Waveforms generated by apps/frontend/scripts/generate-audio.py from sine functions; no external samples/recordings. Mono16-bit PCM22050Hz. Opt-in presentation, never progression authority.",
+      "generation_tool": null
+    }
+  ]
+}

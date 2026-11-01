@@ -1,0 +1,10 @@
+{
+  "contract_version": "1.0.0",
+  "error": {
+    "code": "ACTION_NOT_ALLOWED",
+    "message": "That action is unavailable.",
+    "request_id": "19de9638-2fd0-4c64-a111-dfdf3daa6097",
+    "current_revision": 0,
+    "retryable": false
+  }
+}

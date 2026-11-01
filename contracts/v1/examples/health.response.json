@@ -1,0 +1,10 @@
+{
+  "contract_version": "1.0.0",
+  "status": "ready",
+  "content_version": "1.0.0",
+  "ai": {
+    "provider": "ollama",
+    "model": null,
+    "status": "unknown"
+  }
+}
